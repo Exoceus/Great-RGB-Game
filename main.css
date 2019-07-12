@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    background: #2d2e30;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+} 
+
+#header{
+    padding: 2rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.gradient-bg{
+    background: none;
+    background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+}
+
+#rbg-value-display{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.options-wrapper{
+    padding: 0 10%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2rem 0;
+}
+
+.options{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 750px;  
+}
+
+#message{
+     font-weight: bold;
+     font-size: 1.25rem;
+     line-height: 2rem;
+     color: #2d2e30;
+     transition: 0.5s;
+     display: grid;
+     align-items: center;
+}
+
+.button{
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.level-button-wrapper{
+    display: grid;
+    grid-column-gap: 0.5rem;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+.button-selected{
+    background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fff;
+    color: #fff;
+}
+
+.button:hover{
+    background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fff;
+    color: #fff;
+}
+
+
+#color-square-container{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.color-square{
+    background: #2d2e30;
+    margin: 5%;
+    border-radius: 7.5%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.color-square::before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    #color-square-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .options-wrapper{
+        padding: 0 5%;
+    }
+
+    .button{
+        font-size: 1rem;
+    }
+
+    #message{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
